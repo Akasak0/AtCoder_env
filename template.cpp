@@ -42,9 +42,22 @@ using vpll = vector<pll>;
 #define spa " "
 #define len size()
 #define unless(c) if(!(c))
+#define yn(c) c ? Yes : No
 struct Init { Init() { ios::sync_with_stdio(0); cin.tie(0); } }init; // printf()を使うときは消す.
 const int inf = INT_MAX;
 const ll INF = LLONG_MAX;
+
+// 回転用関数 //
+vector<string> rotate(vector<string> s) {
+    int h = s.size(), w = s[0].size();
+    vector<string> res(w, string(h, '.'));
+    for(int i = 0;i < h; i++) {
+        for(int j = 0; j < w; j++) {
+            res[j][h-1-i] = s[i][j];
+        }
+    }
+    return res;
+}
 
 /*
 .len => .size()
@@ -55,8 +68,8 @@ rall(v) => reverse all
 
 void solve() {
 
+    return ;
 }
-
 
 int main() {
     solve();

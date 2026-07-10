@@ -6,15 +6,41 @@
 set -eu
 
 # 開始時メッセージ
-echo "start query"
+echo "🦀 < Start query"
 
 # コンテスト番号の入力
-echo "input contest number..."
+echo "     Input contest number"
+echo "     If you want to name directory yourself, input !name."
+echo ""
+echo "--- INPUT OPEN ---"
+
 read contest
 
-# 今回コンテストのディレクトリを作成・移動
-mkdir ./ABC$contest
-cd ./ABC$contest
+echo "--- INPUT CLOSE ---"
+echo ""
+
+# !name かどうか?
+if [ $contest == "!name" ]; then
+    echo "🦀 < catch !name"
+
+    # ディレクトリ名を入力
+    echo "     Input directory name"
+    echo ""
+    echo "--- INPUT OPEN ---"
+
+    read name
+
+    echo "--- INPUT CLOSE ---"
+    echo ""
+
+    # 今回コンテストのディレクトリを作成・移動
+    mkdir $name
+    cd ./$name
+else
+    # 今回コンテストのディレクトリを作成・移動
+    mkdir ./ABC$contest
+    cd ./ABC$contest
+fi
 
 # a ~ d問題用のファイルを作成
 touch {a,b,c,d}.cpp
@@ -44,6 +70,9 @@ done
 cd ..
 rm -r ./tmp
 
+# デバッグ用ファイルをコピー
+cp ../dbg.sh ./dbg.sh
+
 # VS Codeで開く
 code .
 for i in d c b a
@@ -52,4 +81,4 @@ do
 done
 
 # 終了時メッセージ
-echo "query complete"
+echo "\ 🦀 Query complete 🦀 /"
