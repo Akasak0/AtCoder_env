@@ -6,13 +6,15 @@ AkasakoのAtCoder用のディレクトリを公開リポジトリにしたもの
 ## tree
 ```
 .
-├── dbg.sh
 ├── del_execute_files.sh
 ├── mkAtcoderEnv.sh
 ├── README.md
-└── template.cpp
+└── templates
+    ├── dbg.sh
+    └── template.cpp
 
-1 directory, 5 files
+2 directories, 5 files
+
 
 ```
 
