@@ -6,11 +6,11 @@
 set -eu
 
 # 開始時メッセージ
-echo "🦀 < Start query"
+echo "Start query"
 
 # コンテスト番号の入力
-echo "     Input contest number"
-echo "     If you want to name directory yourself, input !name."
+echo "Input contest number"
+echo "If you want to name directory yourself, input !name."
 echo ""
 echo "--- INPUT OPEN ---"
 
@@ -21,10 +21,10 @@ echo ""
 
 # !name かどうか?
 if [ $contest == "!name" ]; then
-    echo "🦀 < catch !name"
+    echo "catch !name"
 
     # ディレクトリ名を入力
-    echo "     Input directory name"
+    echo "Input directory name"
     echo ""
     echo "--- INPUT OPEN ---"
 
@@ -81,4 +81,4 @@ do
 done
 
 # 終了時メッセージ
-echo "\ 🦀 Query complete 🦀 /"
+echo "Query complete"
