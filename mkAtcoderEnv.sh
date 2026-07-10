@@ -48,7 +48,7 @@ touch {a,b,c,d}.cpp
 # テンプレートからコピー
 for file in *
 do
-    cat ../template.cpp > $file
+    cat ../templates/template.cpp > $file
 done
 
 # a ~ d問題用の実行用ファイルを作成
@@ -71,7 +71,7 @@ cd ..
 rm -r ./tmp
 
 # デバッグ用ファイルをコピー
-cp ../dbg.sh ./dbg.sh
+cp ../templates/dbg.sh ./dbg.sh
 
 # VS Codeで開く
 code .
